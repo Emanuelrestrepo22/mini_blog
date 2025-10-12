@@ -1,0 +1,227 @@
+/* === Estilos Globales === */
+
+/* Paleta de colores */
+:root {
+  --primary: #008A89;     /* header, elementos destacados */
+  --secondary: #F9A826;   /* botones primarios */
+  --accent: #DA3E52;      /* enlaces interactivos */
+  --dark: #2C3E50;        /* botones secundarios o texto oscuro */
+  --bg: #F2FBFA;          /* fondo general */
+  --text: #1E2D2F;        /* color principal de texto */
+}
+
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Contenedor central */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+/* === Encabezado / Header === */
+
+.site-header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* === Navegación === */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--secondary);
+}
+
+/* === Sección Inicio === */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+}
+
+.hero h2 {
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón principal */
+.btn {
+  background-color: var(--secondary);
+  color: var(--dark);
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #ffb83c;
+  transform: translateY(-2px);
+}
+
+
+/* === Sección Sobre mí === */
+#sobre-mi {
+  background-color: var(--bg);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#sobre-mi h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#sobre-mi p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* === Sección Proyectos === */
+#proyectos {
+  padding: 3rem 1rem;
+}
+
+#proyectos h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid de proyectos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.card .btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+
+/* === Sección Blog === */
+#blog {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+}
+
+#blog h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#blog article {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#blog h3 {
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+
+/* === Sección Contacto === */
+#contacto {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--bg);
+}
+
+#contacto h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--secondary);
+}
+
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--primary);
+  color: white;
+}
