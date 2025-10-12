@@ -1,83 +1,129 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emanuel Restrepo | Blog Personal</title>
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emanuel Restrepo | Blog & Portfolio</title>
+  <meta name="description" content="Blog personal de Emanuel Restrepo. QA Analyst & Web Dev. Proyectos, artículos y contacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <!-- Header con logo + nav + toggle tema -->
   <header class="site-header">
-    <h1>Emanuel Restrepo</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="container header-inner">
+      <!-- Logo SVG minimalista (ER) -->
+      <a class="brand" href="#home" aria-label="Ir al inicio">
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true">
+          <rect rx="12" width="64" height="64" class="logo-bg"/>
+          <text x="50%" y="54%" text-anchor="middle" class="logo-text">ER</text>
+        </svg>
+        <span class="brand-text">Emanuel Restrepo</span>
+      </a>
+
+      <nav aria-label="Principal" class="nav">
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+
+      <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌓</button>
+    </div>
   </header>
 
   <main>
-    <section id="inicio" class="hero">
-      <h2>Analista QA | Aventurero | Amante de la tecnología</h2>
-      <p>Bienvenido a mi espacio personal donde comparto mis proyectos, intereses y experiencias.</p>
-      <a href="#proyectos" class="btn">Ver proyectos</a>
+    <!-- HERO / INICIO -->
+    <section id="home" class="section hero container">
+      <div class="hero-content">
+        <p class="kicker">QA Analyst · Web Tech</p>
+        <h1>Hola, soy <span class="accent">Emanuel</span> — construyo experiencias web simples, modernas e <em>interactivas</em>.</h1>
+        <p class="lead">Este blog-portfolio muestra mis proyectos, aprendizajes y microinteracciones UI. Minimal, claro y profesional.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Ver proyectos</a>
+          <a class="btn ghost" href="#about">Conocer más</a>
+        </div>
+      </div>
     </section>
 
-    <section id="sobre-mi">
+    <!-- SOBRE MÍ -->
+    <section id="about" class="section container">
       <h2>Sobre mí</h2>
-      <p>Soy Emanuel, Analista QA con pasión por la tecnología, los viajes, el tenis y mis perros.</p>
+      <p>Soy Analista de Sistemas y QA con enfoque en calidad y experiencia de usuario. Me gustan la tecnología, los viajes, los deportes de raqueta (tenis y beach tenis) y mis perros. Acá comparto proyectos, artículos y microinteracciones que diseño para aprender y enseñar.</p>
+      <ul class="chips">
+        <li>HTML</li><li>CSS (Grid/Flex)</li><li>JavaScript</li><li>QA & Testing</li><li>Accesibilidad</li>
+      </ul>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="grid">
+    <!-- PROYECTOS (cards con hover) -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Proyectos</h2>
+        <p class="muted">Selección de repos en GitHub con enfoque en calidad y diseño web.</p>
+      </div>
+      <div class="grid cards">
         <article class="card">
-          <h3>Framework Selenium POM</h3>
-          <p>Automatización de pruebas con buenas prácticas y Page Object Model.</p>
-          <a href="https://github.com/Emanuelrestrepo22/selenium-py-POM" target="_blank" class="btn">Ver repositorio</a>
+          <h3>Mini Blog</h3>
+          <p>Blog personal con paleta propia, modo oscuro y microinteracciones.</p>
+          <a class="card-cta" href="https://github.com/Emanuelrestrepo22/mini_blog" target="_blank" rel="noreferrer">Ver repositorio →</a>
         </article>
         <article class="card">
-          <h3>API Testing con Cypress</h3>
-          <p>Proyecto práctico de automatización de endpoints REST con Cypress.</p>
-          <a href="https://github.com/Emanuelrestrepo22/cypress-API-QA" target="_blank" class="btn">Ver repositorio</a>
+          <h3>QA Samples</h3>
+          <p>Casos de prueba y ejemplos de automatización simples con JS.</p>
+          <a class="card-cta" href="#" target="_blank" rel="noreferrer">Ver repositorio →</a>
+        </article>
+        <article class="card">
+          <h3>UI Microinteractions</h3>
+          <p>Colección de botones, toggles y efectos hover accesibles.</p>
+          <a class="card-cta" href="#" target="_blank" rel="noreferrer">Ver repositorio →</a>
         </article>
       </div>
     </section>
 
-    <section id="blog">
-      <h2>Artículos</h2>
-      <article>
-        <h3>Cómo un QA ve la automatización hoy</h3>
-        <p>Reflexión sobre el papel del tester en la era de la automatización.</p>
-      </article>
-      <article>
-        <h3>Mi experiencia corriendo la Media Maratón de Buenos Aires</h3>
-        <p>Una historia personal sobre perseverancia, disciplina y mente fuerte.</p>
-      </article>
+    <!-- BLOG (lista simple) -->
+    <section id="blog" class="section container">
+      <div class="section-head">
+        <h2>Blog</h2>
+        <p class="muted">Reflexiones breves sobre tecnología, QA y aprendizaje continuo.</p>
+      </div>
+      <ul class="list posts">
+        <li>
+          <article>
+            <h3>Por qué empecé este blog</h3>
+            <p class="muted small">3 min · 2025-10-12</p>
+            <p>Quiero documentar mi crecimiento en QA y web, con entregables simples y consistentes…</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Grid vs Flex: cuándo usar cada uno</h3>
+            <p class="muted small">4 min · Borrador</p>
+            <p>Flex es unidimensional, Grid es bidimensional. Pautas prácticas y ejemplos…</p>
+          </article>
+        </li>
+      </ul>
     </section>
 
-    <section id="contacto">
+    <!-- CONTACTO (íconos interactivos) -->
+    <section id="contact" class="section container">
       <h2>Contacto</h2>
-      <ul class="contact-links">
-        <li><a href="https://github.com/Emanuelrestrepo22" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/emanuelrestrepo22/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/emanuelrestrepo22/" target="_blank">Instagram</a></li>
-      </ul>
+      <div class="socials">
+        <a class="icon-link" href="https://github.com/Emanuelrestrepo22" target="_blank" rel="noreferrer" aria-label="GitHub">🐙</a>
+        <a class="icon-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">💼</a>
+        <a class="icon-link" href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Emanuel Restrepo | Blog Personal</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Emanuel Restrepo · Hecho con HTML · CSS · JS</p>
+      <a class="top-link" href="#home">Volver arriba ↑</a>
+    </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
