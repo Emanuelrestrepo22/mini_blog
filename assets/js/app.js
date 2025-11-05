@@ -28,3 +28,38 @@ if (startQuizBtn) {
     window.location.href = 'posts/cuestionario.html';
   });
 }
+const quizBtn = document.getElementById('startQuizBtn');
+if (quizBtn) {
+  quizBtn.addEventListener('click', () => {
+    window.location.href = "./posts/form.html";
+  });
+}
+
+
+async function mostrarHoraBuenosAires() {
+  const el = document.getElementById('buenosAiresTime');
+  if (!el) return;
+
+  try {
+    const res = await fetch('https://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires');
+    const data = await res.json();
+    const fechaHora = new Date(data.datetime);
+
+    const opciones = {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZoneName: 'short'
+    };
+
+    el.textContent = `⏰ Buenos Aires: ${fechaHora.toLocaleString('es-AR', opciones)}`;
+  } catch (error) {
+    console.error("No se pudo obtener la hora:", error);
+  }
+}
+
+mostrarHoraBuenosAires();
