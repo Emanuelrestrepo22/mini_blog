@@ -4,53 +4,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Proyectos | Emanuel Restrepo</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Emanuel.dev</a>
+      <a class="brand" href="../index.html">EmanuelRestrepo22</a>
       <nav class="nav" aria-label="Principal">
-        <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html" class="active">Proyectos</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="../index.html">Inicio</a>
+        <a href="./about_me.html">Sobre mí</a>
+        <a href="./projects.html" class="active">Proyectos</a>
+        <a href="./contact.html">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main class="container section">
-    <h1>Proyectos</h1>
-    <p class="muted">Una selección de proyectos que reflejan mi aprendizaje en QA, desarrollo y diseño web.</p>
+    <h1>🚀 Mi Trayectoria Profesional</h1>
 
-    <div class="grid cards">
-      <article class="card">
-        <img src="assets/img/proyectos.jpg" alt="Mini Blog Personal">
-        <div class="card-body">
-          <h3>Mini Blog Personal</h3>
-          <p>Blog personal con HTML, CSS y JS, integrando modo oscuro y diseño responsive.</p>
-          <a href="https://emanuelrestrepo22.github.io/mini_blog/" class="card-cta" target="_blank">Ver demo →</a>
-        </div>
-      </article>
+    <section class="project-block">
+      <h2>📄 Primeros pasos en desarrollo web</h2>
+      <p>Durante la pandemia, mientras me encontraba aislado, comencé a investigar sobre tecnología. Empecé desarrollando páginas web estáticas con HTML y CSS, y luego incorporé interacciones básicas usando JavaScript.</p>
+    </section>
 
-      <article class="card">
-        <img src="assets/img/code.jpg" alt="Framework QA Automation">
-        <div class="card-body">
-          <h3>Framework QA Automation</h3>
-          <p>Framework de testing automatizado en Python con Selenium y POM.</p>
-          <a href="https://github.com/Emanuelrestrepo22/selenium-py-POM" class="card-cta" target="_blank">Ver repositorio →</a>
-        </div>
-      </article>
+    <section class="project-block">
+      <h2>📚 Documentación funcional & análisis</h2>
+      <p>Como estudiante de <strong>Análisis de Sistemas en el IFTS 16</strong>, aprendí a realizar documentación de requerimientos funcionales utilizando <strong>diagramas UML</strong> y <strong>diagramas entidad-relación (ER)</strong>. Esta experiencia me permitió estructurar mejor los procesos y colaborar eficazmente con equipos.</p>
+    </section>
 
-      <article class="card">
-        <img src="assets/img/code.jpg" alt="API Testing con Postman">
-        <div class="card-body">
-          <h3>API Testing con Postman</h3>
-          <p>Suite de pruebas REST y documentación técnica con Postman.</p>
-          <a href="https://github.com/Emanuelrestrepo22/postman-api-tests" class="card-cta" target="_blank">Ver repositorio →</a>
-        </div>
-      </article>
-    </div>
+    <section class="project-block">
+      <h2>🐍 Introducción a Python y QA Automation</h2>
+      <p>Aprendí a programar con <strong>Python</strong> y encontré en el <strong>testing de software</strong> una verdadera pasión. Comencé a automatizar casos de prueba usando <strong>Selenium</strong> como framework base, creando scripts para validar funcionalidades, detectar errores y optimizar tiempo.</p>
+    </section>
+
+    <section class="project-block">
+      <h2>💼 Portafolio de proyectos</h2>
+      <p>Actualmente sigo formándome y aplicando tecnologías que ayudan a automatizar procesos, escribir documentación clara y ser un puente entre el desarrollo y la calidad del software.</p>
+
+      <div class="grid cards">
+
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="../assets/img/proyectos.jpg" alt="Mini Blog Personal" class="card-img img-front">
+            <img src="../assets/img/proyectos_hover.jpg" alt="Mini Blog Personal Hover" class="card-img img-back">
+          </div>
+          <div class="card-body">
+            <h3>Mini Blog Personal</h3>
+            <p>Blog con HTML, CSS y JS, incluyendo modo oscuro, diseño responsive y cuestionario interactivo.</p>
+            <a class="card-cta" href="https://emanuelrestrepo22.github.io/mini_blog/" target="_blank">Ver demo →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="../assets/img/code.jpg" alt="Framework QA Python" class="card-img img-front">
+            <img src="../assets/img/code_hover.jpg" alt="Framework QA Python Hover" class="card-img img-back">
+          </div>
+          <div class="card-body">
+            <h3>Framework QA Automation</h3>
+            <p>Framework de automatización con Python y Selenium basado en POM (Page Object Model).</p>
+            <a class="card-cta" href="https://github.com/Emanuelrestrepo22/selenium-py-POM" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img-wrapper">
+            <img src="../assets/img/code.jpg" alt="API Testing Postman" class="card-img img-front">
+            <img src="../assets/img/code_hover.jpg" alt="API Testing Postman Hover" class="card-img img-back">
+          </div>
+          <div class="card-body">
+            <h3>API Testing con Postman</h3>
+            <p>Suite de pruebas REST y documentación de endpoints para microservicios.</p>
+            <a class="card-cta" href="https://github.com/Emanuelrestrepo22/postman-api-tests" target="_blank">Ver repositorio →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -59,6 +89,6 @@
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="../assets/js/app.js" defer></script>
 </body>
 </html>

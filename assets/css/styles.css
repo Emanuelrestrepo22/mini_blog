@@ -1,6 +1,6 @@
 /* assets/css/styles.css */
 
-/* --- Variables globales --- */
+/* === VARIABLES GLOBALES === */
 :root {
   --c-bg: #ffffff;
   --c-surface: #f2f4f6;
@@ -19,14 +19,13 @@ html[data-theme="dark"] {
   --c-surface: #1C1C1E;
 }
 
-/* --- Global reset & base --- */
+/* === RESET Y BASE === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  margin: 0;
   background: var(--c-bg);
   color: var(--c-text);
   font-family: "Inter", system-ui, sans-serif;
@@ -49,7 +48,7 @@ a:hover {
   padding-block: 3rem;
 }
 
-/* --- Header --- */
+/* === HEADER === */
 .site-header {
   background: var(--c-header);
   color: #fff;
@@ -86,7 +85,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-/* --- Hero Section --- */
+/* === HERO === */
 .hero {
   text-align: center;
 }
@@ -135,7 +134,7 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* --- Cards / Grid --- */
+/* === CARDS === */
 .grid.cards {
   display: grid;
   gap: 1.5rem;
@@ -143,7 +142,7 @@ a:hover {
 }
 .card {
   background: var(--c-surface);
-  border-radius: var(--c-radius);
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -152,21 +151,39 @@ a:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
+
+/* === IMAGEN DOBLE CON HOVER === */
 .card-img-wrapper {
+  position: relative;
   width: 100%;
   height: 0;
-  padding-top: 56.25%; /* 16:9 ratio */
-  position: relative;
+  padding-top: 56.25%; /* relación 16:9 */
   overflow: hidden;
 }
-.card-img {
+.card-img-wrapper .card-img {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
+  transition: opacity 0.4s ease;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
+.card-img-wrapper .img-front {
+  opacity: 1;
+  z-index: 1;
+}
+.card-img-wrapper .img-back {
+  opacity: 0;
+  z-index: 2;
+}
+.card:hover .img-front {
+  opacity: 0;
+}
+.card:hover .img-back {
+  opacity: 1;
+}
+
+/* === CUERPO DE CARD === */
 .card-body {
   padding: 1rem;
 }
@@ -177,7 +194,20 @@ a:hover {
   font-weight: 600;
 }
 
-/* --- Footer --- */
+/* === BLOQUES DE PROYECTOS === */
+.project-block {
+  margin-bottom: 3rem;
+}
+.project-block h2 {
+  color: var(--c-primary);
+  margin-bottom: .5rem;
+}
+.project-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* === FOOTER === */
 .site-footer {
   background: var(--c-header);
   color: #fff;
@@ -189,7 +219,7 @@ a:hover {
   margin: 0;
 }
 
-/* --- Responsive adjustments --- */
+/* === RESPONSIVE === */
 @media (max-width: 900px) {
   .hero-content img {
     width: 150px;
@@ -200,4 +230,9 @@ a:hover {
   .grid.cards {
     grid-template-columns: 1fr;
   }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
+
