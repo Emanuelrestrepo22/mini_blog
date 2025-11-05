@@ -1,16 +1,61 @@
-<!-- posts/cuestionario.html -->
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf‑8">
+  <meta name="viewport" content="width=device‑width, initial‑scale=1">
   <title>Cuestionario | Emanuel Restrepo</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    /* CSS específico para el cuestionario */
+    .quiz-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .question {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+    .options li {
+      margin: 0.5rem 0;
+    }
+    .options button {
+      width: 100%;
+      padding: .8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius);
+      background: var(--c-primary);
+      color: #fff;
+      cursor: pointer;
+      transition: background .2s ease;
+    }
+    .options button:hover {
+      background: var(--c-accent);
+    }
+    .timer {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: var(--c-primary);
+    }
+    .result {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html">Emanuelrestrepo22</a>
+      <a class="brand" href="../index.html">EmanuelRestrepo22</a>
       <nav class="nav" aria-label="Principal">
         <a href="../index.html">Inicio</a>
         <a href="about_me.html">Sobre mí</a>
@@ -20,13 +65,14 @@
     </div>
   </header>
 
-  <main class="container section">
-    <h1>Cuestionario interactivo</h1>
-    <div id="countdown" style="font-size:2rem; text-align:center; margin-top:2rem;">
-      Iniciando en <span id="timer">10</span> segundos...
+  <main class="container section quiz-container">
+    <h1>Cuestionario Interactivo 🎮</h1>
+    <div class="timer">Tiempo restante: <span id="time‑left">10</span> seg</div>
+    <div id="quiz">
+      <!-- Aquí se mostrará la pregunta y opciones -->
     </div>
-    <!-- Aquí luego se cargará el cuestionario -->
-    <div id="quiz-container" style="display:none; margin-top:2rem;"></div>
+    <div class="result hidden" id="resultMessage"></div>
+    <button id="restartBtn" class="btn primary hidden">Volver a intentar</button>
   </main>
 
   <footer class="site-footer">
@@ -36,6 +82,6 @@
   </footer>
 
   <script src="../assets/js/app.js" defer></script>
-  <script src="../assets/js/cuestionario.js" defer></script>
+  <script src="../assets/js/form.js" defer></script>
 </body>
 </html>
