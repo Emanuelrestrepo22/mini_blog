@@ -1,45 +1,48 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto | Emanuel Restrepo</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Emanuel.dev</a>
+      <a class="brand" href="../index.html">EmanuelRestrepo22</a>
       <nav class="nav" aria-label="Principal">
-        <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="contacto.html" class="active">Contacto</a>
+        <a href="../index.html">Inicio</a>
+        <a href="about_me.html">Sobre mí</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="contact.html" class="active">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main class="container section">
-    <h1>Contacto</h1>
-    <p>Puedes comunicarte conmigo a través de mis redes profesionales o dejarme un mensaje directo:</p>
+    <h1>📬 Contacto</h1>
+    <p>Puedes comunicarte conmigo a través del siguiente formulario o por redes sociales. ¡Estoy abierto a colaboraciones, proyectos o simplemente charlar!</p>
 
-    <form class="contact-form">
-      <label>Nombre
-        <input type="text" name="nombre" required>
+    <form class="contact-form" id="contactForm">
+      <label for="nombre">Nombre
+        <input type="text" id="nombre" name="nombre" required>
       </label>
-      <label>Email
-        <input type="email" name="email" required>
+
+      <label for="email">Email
+        <input type="email" id="email" name="email" required>
       </label>
-      <label>Mensaje
-        <textarea name="mensaje" rows="4" required></textarea>
+
+      <label for="mensaje">Mensaje
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
       </label>
+
       <button type="submit" class="btn primary">Enviar mensaje</button>
     </form>
 
     <div class="socials">
-      <a href="https://github.com/Emanuelrestrepo22" target="_blank" class="icon-link">🐙</a>
-      <a href="https://linkedin.com" target="_blank" class="icon-link">💼</a>
-      <a href="https://instagram.com" target="_blank" class="icon-link">📷</a>
+      <a href="https://github.com/Emanuelrestrepo22" target="_blank" class="icon-link" aria-label="GitHub">🐙</a>
+      <a href="https://linkedin.com" target="_blank" class="icon-link" aria-label="LinkedIn">💼</a>
+      <a href="https://instagram.com" target="_blank" class="icon-link" aria-label="Instagram">📷</a>
     </div>
   </main>
 
@@ -49,6 +52,6 @@
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="../assets/js/app.js" defer></script>
 </body>
 </html>

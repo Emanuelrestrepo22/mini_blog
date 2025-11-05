@@ -284,6 +284,7 @@ a:hover {
   }
 }
 
+/* === bloque “quiz-page” === */
 .quiz-container {
   max-width: 600px;
   margin: 0 auto;
@@ -334,9 +335,44 @@ a:hover {
   background-color: #F44336 !important; /* Rojo */
 }
 
-
-.footer-time {
-  font-size: 0.85rem;
-  color: #ccc;
-  margin-top: 0.5rem;
+/* === contact.html styles === */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 2rem;
 }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+button.btn.primary {
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-surface);
+  font-size: 1.5rem;
+  color: var(--c-primary);
+  transition: background var(--transition-speed);
+}
+.icon-link:hover {
+  background: var(--c-accent);
+  color: #fff;
+}
+
+
