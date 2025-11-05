@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial‑scale=1" />
+  <title>Blog de Emanuel Restrepo | Analista QA</title>
+  <meta name="description" content="Blog y portfolio personal de Emanuel Restrepo, Analista QA y desarrollador web.">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="./assets/icons/icon.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Emanuelrestrepo22</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="./posts/about_me.html">Sobre mí</a>
+        <a href="./posts/projects.html">Proyectos</a>
+        <a href="./posts/contact.html">Contacto</a>
+      </nav>
+      <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌓</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="section hero">
+      <div class="hero-content">
+        <img src="assets/img/profile.jpg" alt="Emanuel Restrepo" class="perfil-img">
+        <h1>Hola, soy <span class="accent">Emanuel Restrepo</span></h1>
+        <p class="lead">Analista QA & Desarrollador Web. Me apasiona la tecnología, la calidad y crear experiencias web simples, modernas y humanas.</p>
+        <div class="actions">
+          <a class="btn primary" href="./posts/projects.html">Ver mis proyectos</a>
+          <a class="btn ghost" href="./posts/about_me.html">Conocer más sobre mí</a>
+          <button id="startQuizBtn" class="btn primary">Iniciar Cuestionario 🎯</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Últimos artículos Section -->
+    <section class="section latest-articles">
+      <h2>Últimos artículos</h2>
+      <div class="grid cards">
+        <article class="card">
+          <img src="assets/img/team_work.jpg" alt="Código fuente" class="card-img">
+          <div class="card-body">
+            <h3>Por qué decidí entrar al mundo del Testing</h3>
+            <p>Durante la pandemia descubrí mi interés por el testing y la calidad del software. Desde entonces, transformé mi curiosidad en carrera.</p>
+            <a class="card-cta" href="#">Leer más →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/img/tennis_player.jpeg" alt="Tenis" class="card-img">
+          <div class="card-body">
+            <h3>Qué me enseñó el tenis sobre la vida y el trabajo</h3>
+            <p>El tenis es constancia, análisis y estrategia: los mismos pilares que aplico cada día en mi trabajo como QA y desarrollador.</p>
+            <a class="card-cta" href="#">Leer más →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Emanuel Restrepo | Desarrollado con ❤️ y tecnología web</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

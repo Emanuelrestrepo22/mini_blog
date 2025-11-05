@@ -1,0 +1,41 @@
+<!-- posts/cuestionario.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuestionario | Emanuel Restrepo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">Emanuelrestrepo22</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="../index.html">Inicio</a>
+        <a href="about_me.html">Sobre mí</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Cuestionario interactivo</h1>
+    <div id="countdown" style="font-size:2rem; text-align:center; margin-top:2rem;">
+      Iniciando en <span id="timer">10</span> segundos...
+    </div>
+    <!-- Aquí luego se cargará el cuestionario -->
+    <div id="quiz-container" style="display:none; margin-top:2rem;"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Emanuel Restrepo</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js" defer></script>
+  <script src="../assets/js/cuestionario.js" defer></script>
+</body>
+</html>

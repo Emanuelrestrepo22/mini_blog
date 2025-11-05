@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto | Emanuel Restrepo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Emanuel.dev</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Contacto</h1>
+    <p>Puedes comunicarte conmigo a través de mis redes profesionales o dejarme un mensaje directo:</p>
+
+    <form class="contact-form">
+      <label>Nombre
+        <input type="text" name="nombre" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" required>
+      </label>
+      <label>Mensaje
+        <textarea name="mensaje" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="btn primary">Enviar mensaje</button>
+    </form>
+
+    <div class="socials">
+      <a href="https://github.com/Emanuelrestrepo22" target="_blank" class="icon-link">🐙</a>
+      <a href="https://linkedin.com" target="_blank" class="icon-link">💼</a>
+      <a href="https://instagram.com" target="_blank" class="icon-link">📷</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Emanuel Restrepo</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

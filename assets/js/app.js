@@ -1,18 +1,30 @@
-// app.js — microinteracciones y tema
+// assets/js/app.js
 
-// Año dinámico en el footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// Actualiza el año automáticamente
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// Toggle de tema con persistencia
-const root = document.documentElement; // <html>
-const toggle = document.getElementById('themeToggle');
-const saved = localStorage.getItem('theme');
-if (saved) root.setAttribute('data-theme', saved);
+// Toggle de tema claro / oscuro
+const root = document.documentElement;
+const themeBtn = document.getElementById('themeToggle');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+  }
+}
 
-toggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', current);
-  localStorage.setItem('theme', current);
-});
-
-// (Opcional) Scroll suave ya está vía CSS: html{scroll-behavior:smooth}
+// Botón iniciar cuestionario
+const startQuizBtn = document.getElementById('startQuizBtn');
+if (startQuizBtn) {
+  startQuizBtn.addEventListener('click', () => {
+    window.location.href = 'posts/cuestionario.html';
+  });
+}
